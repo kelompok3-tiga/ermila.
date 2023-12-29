@@ -16,7 +16,7 @@ class User
 
 class UserManager extends User
 {
-    // encapsulasi
+    // encapsulasi memmbungkus protect 
     protected $conn;
     public function __construct($conn, $password, $username, $fullname)
     {
@@ -59,3 +59,30 @@ class Login extends User
         }
     }
 }
+
+#Inheritance
+#""class Admin extends User
+#{
+#  private $isAdmin;
+
+    #public function __construct($username, $password, $fullname, $isAdmin)
+    #{
+        #parent::__construct($username, $password, $fullname);
+        #$this->isAdmin = $isAdmin;
+    #}
+
+    #public function getAdminStatus()
+    #{
+       # return $this->isAdmin;
+    #}
+#}
+#$admin = new Admin("admin_username", "admin_password", "Admin Fullname", true);
+#$status = $admin->getAdminStatus();
+
+#if ($status) {
+    #echo "User is an admin.";
+#} else {
+   # echo "User is not an admin.";
+#}
+
+#""
